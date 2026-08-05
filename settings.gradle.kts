@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "android-libs"
 include(":webserver")
+include(":core")
