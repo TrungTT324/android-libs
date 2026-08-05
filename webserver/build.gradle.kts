@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "hdisoft.app.webserver"
-    compileSdk = 34
+    compileSdk = 37
 
     defaultConfig {
         minSdk = 21
@@ -35,11 +35,11 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
     // api, not implementation: WebSocketHost/WebSocketClient extend java-websocket's
     // base classes, so consumers (e.g. :libs:logcat) need it on their compile classpath too.
-    api("org.java-websocket:Java-WebSocket:1.5.4")
+    api("org.java-websocket:Java-WebSocket:1.6.0")
     // implementation, not api: SignalRClient wraps HubConnection by composition (no
     // subclassing), so com.microsoft.signalr / RxJava3 types never leak into its own
     // public API — consumers only ever see SignalRClient's own methods.
-    implementation("com.microsoft.signalr:signalr:9.0.3")
+    implementation("com.microsoft.signalr:signalr:10.0.9")
 }
 
 // Publishes the "release" AAR to GitHub Packages (Maven registry) as
