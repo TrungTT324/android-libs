@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "hdisoft.app.webserver"
-    compileSdk = 37
+    compileSdk = 34
 
     defaultConfig {
         minSdk = 21

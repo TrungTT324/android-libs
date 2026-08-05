@@ -22,9 +22,6 @@ jobs:
 
       - uses: android-actions/setup-android@v3
 
-      - name: Install compileSdk platform
-        run: sdkmanager "platforms;android-37"
-
       - name: Extract version from tag
         id: version
         run: echo "version=${GITHUB_REF_NAME#webserver-v}" >> "$GITHUB_OUTPUT"
